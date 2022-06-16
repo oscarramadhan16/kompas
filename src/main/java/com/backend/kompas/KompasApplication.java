@@ -3,7 +3,9 @@ package com.backend.kompas;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 @SpringBootApplication
 public class KompasApplication {
@@ -11,6 +13,10 @@ public class KompasApplication {
 		/**
 		 * Level 1
 		 */
+		String[] stringArray = new String[] {"budi", "bermain", "bola", "di", "halaman", "rumah"};
+		List<String> newArray = NewStringArray.newStringArray(Arrays.asList(stringArray));
+		System.out.println("=level 1=");
+		System.out.println("init string array: " + Arrays.toString(stringArray) + " | " + "new array list: " + newArray.toString());
 
 		/**
 		 * Level 2
@@ -50,7 +56,7 @@ public class KompasApplication {
 		 * Level 6
 		 */
 		int[] initArray = new int[] { 5, 3, 2, 8, 1, 4};
-		int[] sortedArray = SortArray.sortArray(initArray);
+		int[] sortedArray = SortArray.sortArray(initArray.clone());
 		System.out.println("=level 6=");
 		System.out.println("init array: " + Arrays.toString(initArray) + " | " + "sorted array: " + Arrays.toString(sortedArray));
 
