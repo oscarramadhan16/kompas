@@ -16,6 +16,7 @@ public class NewStringArray {
                     //  add flag here for last data already included in process here
                     skipLast = true;
                 }
+                //  add value of i if length of concat string is okay
                 i++;
             } else {
                 //  if not, add the existing value to new array list

@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 @SpringBootApplication
@@ -13,6 +14,7 @@ public class KompasApplication {
 		/**
 		 * Level 1
 		 */
+		//	change string array value here
 		String[] stringArray = new String[] {"budi", "bermain", "bola", "di", "halaman", "rumah"};
 		List<String> newArray = NewStringArray.newStringArray(Arrays.asList(stringArray));
 		System.out.println("=level 1=");
@@ -30,7 +32,8 @@ public class KompasApplication {
 		 *
 		 * total gaji terbesar : Rey dgn pekerjaan akuntansi
 		 */
-
+		System.out.println("=level 2=");
+		System.out.println("Gaji tertinggi : Rey");
 
 		/**
 		 * Level 3
@@ -43,6 +46,13 @@ public class KompasApplication {
 		/**
 		 * Level 4
 		 */
+		HashMap<String, String[]> hashMap = new HashMap<>();
+		hashMap.put("A1", new String[]{"Akuntansi", "Programming", "Information System", "Data Structure"});
+		hashMap.put("A2", new String[]{"Akuntansi", "Programming", "Algorithm", "Algorithm II"});
+		hashMap.put("A3", new String[]{"Algorithm II", "Algorithm", "Information System", "Data Structure"});
+		var manipulated = HashMapManipulation.manipulate(hashMap);
+		System.out.println("=level 4=");
+		System.out.println(manipulated);
 
 		/**
 		 * Level 5
